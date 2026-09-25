@@ -1,0 +1,11 @@
+version: 2
+
+snapshots:
+  - name: snp_customers
+    data_tests:
+      - one_current_row_per_business_key:
+          arguments:
+            business_key: customer_id
+      - non_overlapping_validity_windows:
+          arguments:
+            business_key: customer_id

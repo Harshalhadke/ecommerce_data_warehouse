@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: SCD Type 2 customer dimension built from the snp_customers snapshot
+    columns:
+      - name: customer_key
+        description: Surrogate key (dbt snapshot scd id)
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: Natural/business key
+        data_tests:
+          - not_null
+      - name: is_current
+        data_tests:
+          - not_null
+    data_tests:
+      - one_current_row_per_business_key:
+          arguments:
+            business_key: customer_id
+            is_current_expression: is_current

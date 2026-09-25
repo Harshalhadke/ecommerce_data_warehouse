@@ -1,0 +1,42 @@
+version: 2
+
+sources:
+  - name: raw_ecommerce
+    database: "{{ target.database }}"
+    schema: public
+    tables:
+      - name: dim_customers
+        description: Raw customer data
+      - name: dim_date
+        description: Raw date dimension data
+      - name: dim_geography
+        description: Raw geography dimension data
+      - name: dim_products
+        description: Raw product dimension data
+      - name: dim_stores
+        description: Raw store dimension data
+      - name: fact_customer_events
+        description: Raw customer events fact data
+      - name: fact_inventory
+        description: Raw inventory fact data
+      - name: fact_order_items
+        description: Raw order items fact data
+      - name: fact_orders
+        description: Raw orders fact data
+  
+  - name: staging_ecommerce
+    database: "{{ target.database }}"
+    schema: staging
+    tables:
+      - name: stg_customer_events
+        description: Staging customer events data
+      - name: stg_customers
+        description: Staging customer data
+      - name: stg_inventory
+        description: Staging inventory data
+      - name: stg_order_items
+        description: Staging order items data
+      - name: stg_orders
+        description: Staging orders data
+      - name: stg_products
+        description: Staging products data
