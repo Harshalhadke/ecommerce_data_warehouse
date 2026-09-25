@@ -1,0 +1,20 @@
+# Python dependencies for E-Commerce Data Warehouse project
+
+# Data generation
+faker>=20.0.0
+psycopg2-binary>=2.9.0
+
+# Data manipulation (optional but useful)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# SQL linting
+sqlfluff>=2.3.0
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-postgresql>=5.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.0

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+
+# Database
+*.db
+*.sqlite
+*.sql.bak
+backup_*.sql
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local
+
+# Data files (adjust based on your needs)
+*.csv.bak
+data/raw/
+data/temp/
+
+# SQLFluff
+.sqlfluff
+.sqlfluffignore
+
+# OS
+Thumbs.db
